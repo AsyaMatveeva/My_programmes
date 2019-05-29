@@ -8,10 +8,10 @@ def f(n):
         return(1)
     else:
         for i in range(3, n + 1):
-            i = x + y
+            a = x + y
             x = y
             print("x =", x)
-            y = i
+            y = a
             print("y =", y)
-        return(i)
+        return(a)
 print("result =", f(n))
