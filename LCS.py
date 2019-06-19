@@ -1,23 +1,23 @@
-n = int(input())
-x = []
+n = int(input()) #Height of the table with values
+x = [] #1st sequence
 x = input().split()
 for a in range(n):
     x[a] = int(x[a])
 print("x =", x)
-m = int(input())
-y = []
+m = int(input()) #Width of the table with values
+y = [] #2nd sequence
 y  = input().split()
 for b in range(m):
     y[b] = int(y[b])
 print("y =", y)
-table = {}
-for i in range(n + 1):
+table = {} #Table with subsequences' lengths
+for i in range(n + 1): #Lines
     table[i] = {}
-    for j in range(m + 1):
+    for j in range(m + 1): #Columns
         table[0][j] = 0
         table[i][0] = 0
 print("table =", table)
-LCS = {}
+LCS = {} #Table with subseqences
 for i in range(n + 1):
     LCS[i] = {}
     for j in range(m + 1):
