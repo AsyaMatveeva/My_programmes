@@ -1,3 +1,5 @@
+'''Input: n
+This program calculates element of Fibonacci sequence with index n - 1.'''
 n = int(input()) "Number of the element in Fibonacci sequence
 def f(n):
     x = 1 #previous Fibonacci number
