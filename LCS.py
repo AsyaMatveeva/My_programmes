@@ -1,3 +1,8 @@
+'''For 2 given sequences of numbers (x and y) find the subsequence with maximum length that is contained in both sequences. 
+This program creates 2 tables ("LCS" and "table"). Height = 1st sequense's length (n). 
+Width = 2nd sequence's length (m).  Tables are being filled consistently with Dinamic Programming method. 
+RESULT: Each cage of "LCS" containes LCS for 1st n elements of "x" and 1st m elements of "y". 
+Each cage of "table" corresponds to the length of "LCS" sequence (in the appropriate cage).'''
 n = int(input()) #Height of the table with values
 x = [] #1st sequence
 x = input().split()
