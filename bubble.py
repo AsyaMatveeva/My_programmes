@@ -1,18 +1,20 @@
 import random
-n = int(input())
-num = [1]
+n = int(input()) #length of the sequence
+num = [1] #unsorted seqence
 for i in range(2, n + 1):
     num.append(i)
 random.shuffle(num)
 print (num)
-b = 0
-c = 1
+b = 0 #Index of the element that is comparing with others at the moment
+c = 1 #Index of the element that is comparing with num[b]
+def swap(i, j):
+    k = i
+    i = j
+    j = k
 while b != n - 1:
     if c <= n - 1 - b:
         if num[b] > num[b + c]:
-            x = num[b]
-            num[b] = num[b + c]
-            num[b + c] = x
+            swap(num[b], num[b + c])
             for i in (num):
                 print(i,' ', end='')
             print()
