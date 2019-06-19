@@ -1,3 +1,5 @@
+'''Basic sort working in O(n^2). 
+Compares each element of the given sequence with elements with bigger indexes and sorts the pair in acsending order (swap or pass).'''
 import random
 n = int(input()) #length of the sequence
 num = [1] #unsorted seqence
