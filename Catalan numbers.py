@@ -1,3 +1,5 @@
+'''Reccurent way to count the given number of Catalan sequence.
+Catalan numbers - quantity of right arrangement of n pairs of brackets for n from 0 to infinity (C0 = 1, C1 = 1).'''
 n = int(input()) #Number of Catalan sequence's element to count
 def C_num(n):
     Sum = 0
