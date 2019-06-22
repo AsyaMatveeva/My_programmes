@@ -13,10 +13,11 @@ def swap(i, j):
     k = i
     i = j
     j = k
+    return(i, j)
 while b != n - 1:
     if c <= n - 1 - b:
         if num[b] > num[b + c]:
-            swap(num[b], num[b + c])
+            num[b], num[b + c] = swap(num[b], num[b + c])
             for i in (num):
                 print(i,' ', end='')
             print()
