@@ -1,9 +1,9 @@
 import random
-heap_length = 5
-Heap = ["n", 2, 3, 1, 4, 5]
-'''for i in range(heap_length):
+heap_length = int(input())
+Heap = ["n"]
+for i in range(heap_length):
     i = random.randint(0, 100)
-    Heap.append(i)'''
+    Heap.append(i)
 print(Heap)
 def sort(x, y, i):
     if Heap[2] >= Heap[3] or heap_length - i < 3:
