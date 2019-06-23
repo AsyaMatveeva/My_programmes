@@ -25,9 +25,9 @@ for k in range(2, heap_length + 1):
     heap_value = Heap[k]
     b = k
     while b > 1 and heap_value > Heap[b//2]:
-        Heap[b//2], heap_value = heap_value, Heap[b//2]
-        Heap[b] = heap_value
+        Heap[b//2], Heap[b] = Heap[b], Heap[b//2]
         b = b//2
+        heap_value = Heap[b]
 print("Heap after conversion=", Heap)                                                
 for i in range(1, heap_length):
     print("i =", i)
