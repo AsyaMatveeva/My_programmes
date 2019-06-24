@@ -1,13 +1,18 @@
+'''Sorting algorythm representing the array in the form of a binary piramid. Steps:
+1. Converting array into a heap
+2. Sorting the array:
+    2.1 Swaps the 1st and the last elements
+    2.2 Sorts the new heap without the last element'''
 import random
-heap_length = int(input())
-Heap = ["n"]
+heap_length = int(input()) #Length of the sorting array
+Heap = ["n"] #Main array
 for i in range(heap_length):
     i = random.randint(0, 100)
     Heap.append(i)
 print(Heap)
 def sort(x, y, i):
     if Heap[2] >= Heap[3] or heap_length - i < 3:
-        pos_max = 2
+        pos_max = 2 #Index of the biggest 
     else:
         pos_max = 3
     print("pos_max =", pos_max)
@@ -21,14 +26,16 @@ def sort(x, y, i):
             print("pos_max_s =", pos_max)
     print("Heap =", Heap)
     return(Heap)
+#Converting array into a heap
 for k in range(2, heap_length + 1):
-    heap_value = Heap[k]
-    b = k
+    heap_value = Heap[k] #Current value that is comparing
+    b = k #heap_value's index
     while b > 1 and heap_value > Heap[b//2]:
         Heap[b//2], Heap[b] = Heap[b], Heap[b//2]
         b = b//2
         heap_value = Heap[b]
-print("Heap after conversion=", Heap)                                                
+print("Heap after conversion=", Heap)
+#Heap sorting
 for i in range(1, heap_length):
     print("i =", i)
     Heap[1], Heap[heap_length - i + 1] = Heap[heap_length - i + 1], Heap[1]
