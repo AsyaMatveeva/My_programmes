@@ -9,15 +9,10 @@ random.shuffle(num)
 print (num)
 b = 0 #Index of the element that is comparing with others at the moment
 c = 1 #Index of the element that is comparing with num[b]
-def swap(i, j):
-    k = i
-    i = j
-    j = k
-    return(i, j)
 while b != n - 1:
     if c <= n - 1 - b:
         if num[b] > num[b + c]:
-            num[b], num[b + c] = swap(num[b], num[b + c])
+            num[b], num[b + c] = num[b + c], num[b]
             for i in (num):
                 print(i,' ', end='')
             print()
